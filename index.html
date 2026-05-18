@@ -1,0 +1,532 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Merlim Sarona Portfolio</title>
+
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+<div class="particles"></div>
+
+<div id="viewer" class="viewer" onclick="closeViewer()">
+
+  <span class="close-viewer">&times;</span>
+
+  <img id="viewerImg" alt="Full View">
+
+  <h2 id="viewerTitle"></h2>
+  <p id="viewerDesc"></p>
+
+</div>
+  <!-- BACKGROUND -->
+<h1 class="bg-text">
+  CREATIVE<br>DESIGNER
+</h1>
+
+  <!-- LOADER -->
+<!-- LOADER -->
+<div class="loader" id="loader">
+  <div class="loader-content">
+    <h1>Hi, I'm Merlim!👋</h1>
+    <p>Creative Designer</p>
+  </div>
+</div>
+
+  <!-- CURSOR -->
+  <div class="cursor"></div>
+  <div class="cursor2"></div>
+
+  <!-- EFFECTS -->
+  <div class="glow"></div>
+  <div class="bg"></div>
+
+  <div class="blob b1"></div>
+  <div class="blob b2"></div>
+  <div class="blob b3"></div>
+
+  <!-- MODAL -->
+  <div class="modal" id="modal">
+
+    <span class="close" onclick="closeModal()">×</span>
+
+    <button class="nav left" onclick="prevImage()">‹</button>
+
+    <img id="modalImg" alt="Preview">
+
+    <button class="nav right" onclick="nextImage()">›</button>
+
+    <h2 id="modalTitle"></h2>
+    <p id="modalDesc"></p>
+
+  </div>
+<div class="viewer" id="viewer">
+
+  <span class="close-viewer" onclick="closeViewer()">×</span>
+
+  <img id="viewerImg" />
+
+  <h2 id="viewerTitle"></h2>
+  <p id="viewerDesc"></p>
+
+</div>
+
+  <!-- NAVBAR -->
+  <nav>
+
+    <h1>PORTFOLIO</h1>
+
+    <div class="links">
+      <a href="#about">About</a>
+      <a href="#projects">Projects</a>
+      <a href="#contact">Contact</a>
+    </div>
+
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero">
+
+  <div class="hero-glass">
+
+    <img src="img/img_aesapicture.jpeg" class="profile" alt="Profile">
+
+    <p class="small">GRAPHIC DESIGNER • CREATIVE EDITOR</p>
+<h1 id="typing" class="hero-title">Merlim Sarona</h1>
+    <h2 class="hero-title">
+      <span id="typing"></span>
+      <span class="cursor-text"></span>
+    </h2>
+
+    <p class="description">
+      Creating clean visuals and modern designs
+      for digital and creative projects.
+    </p>
+
+    <div class="hero-buttons">
+      <a href="#about"><button>ABOUT ME</button></a>
+      <a href="img/MERLIM SARONA.pdf" target="_blank"><button class="outline">RESUME</button></a>
+    </div>
+
+  </div>
+
+</section>
+
+  <!-- ABOUT -->
+<section id="about" class="about reveal">
+
+  <div class="about-container">
+
+    <!-- LEFT SIDE -->
+    <div class="about-text">
+      <h3>About Me</h3>
+
+      <p>
+        I’m a creative graphic designer focused on crafting clean,
+        modern, and impactful visual designs for digital and print media.
+      </p>
+
+      <p>
+        I specialize in branding, social media content, presentations,
+        and promotional materials for events and organizations.
+      </p>
+
+      <p>
+        I love turning simple ideas into visuals that actually stand out.
+      </p>
+    </div>
+   
+
+    <!-- RIGHT SIDE -->
+    <div class="about-skills">
+
+      <h4>What I Do</h4>
+
+<div class="skill" onclick="goToProject('logo')">Logo Design</div>
+<div class="skill" onclick="goToProject('poster')">Poster Design</div>
+<div class="skill" onclick="goToProject('social')">Social Media Pubmats</div>
+<div class="skill" onclick="goToProject('apparel')">Shirt & Merch Design</div>
+<div class="skill" onclick="goToProject('tarpaulin')">Tarpaulin Layouts</div>
+
+    </div>
+
+  </div>
+
+<section class="carousel-section languages">
+  <h2>Languages</h2>
+  <div id="languageList" class="language-container"></div>
+</section>
+
+  <!-- PROJECTS -->
+<!-- PROJECTS -->
+<section id="projects" class="projects reveal">
+
+  <h3>Projects</h3>
+
+  <!-- MAIN FILTERS -->
+  <div class="filter-buttons">
+
+    <button class="filter-btn active"
+      onclick="filterProjects('all', '', this)">
+      All
+    </button>
+
+    <button class="filter-btn"
+      onclick="filterProjects('poster', '', this)">
+      Posters
+    </button>
+
+    <button class="filter-btn"
+      onclick="filterProjects('logo', '', this)">
+      Logos
+    </button>
+
+    <button class="filter-btn"
+      onclick="filterProjects('shirt', '', this)">
+      Apparel
+    </button>
+
+    <button class="filter-btn"
+      onclick="filterProjects('led', '', this)">
+      LED Backgrounds
+    </button>
+
+    <button class="filter-btn"
+      onclick="filterProjects('tarp', '', this)">
+      Tarpaulin / Prints
+    </button>
+
+    <button class="filter-btn"
+      onclick="filterProjects('social', '', this)">
+      Social Media
+    </button>
+
+  </div>
+
+  <!-- SUB CATEGORY FILTERS -->
+<!-- SOCIAL SUB CATEGORY FILTERS -->
+<div class="sub-filter-buttons social-sub" id="socialSubFilters" style="display:none;">
+
+  <button class="filter-btn active"
+    
+  <button class="filter-btn"
+    onclick="filterProjects('social','sports',this)">
+    Sports
+  </button>
+
+  <button class="filter-btn"
+    onclick="filterProjects('social','holidays',this)">
+    Holidays
+  </button>
+
+  <button class="filter-btn"
+    onclick="filterProjects('social','artists',this)">
+    Artists
+  </button>
+
+  <button class="filter-btn"
+    onclick="filterProjects('social','contest',this)">
+    Mr & Ms
+  </button>
+
+  <button class="filter-btn"
+    onclick="filterProjects('social','elections',this)">
+    Elections
+  </button>
+
+  <button class="filter-btn"
+    onclick="filterProjects('social','others',this)">
+    Others
+  </button>
+
+</div>
+  <!-- POSTERS -->
+  <div class="carousel-section poster">
+
+    <h4>Poster Designs</h4>
+
+    <div class="carousel">
+
+      <button class="carousel-btn left"
+        onclick="scrollCarousel('posterTrack', -1)">
+        ‹
+      </button>
+
+      <div class="carousel-track" id="posterTrack"></div>
+
+      <button class="carousel-btn right"
+        onclick="scrollCarousel('posterTrack', 1)">
+        ›
+      </button>
+
+    </div>
+
+  </div>
+
+  <!-- LOGOS -->
+  <div class="carousel-section logo">
+
+    <h4>Logo Designs</h4>
+
+    <div class="carousel">
+
+      <button class="carousel-btn left"
+        onclick="scrollCarousel('logoTrack', -1)">
+        ‹
+      </button>
+
+      <div class="carousel-track" id="logoTrack"></div>
+
+      <button class="carousel-btn right"
+        onclick="scrollCarousel('logoTrack', 1)">
+        ›
+      </button>
+
+    </div>
+
+  </div>
+
+  <!-- APPAREL -->
+  <div class="carousel-section shirt">
+
+    <h4>Apparel Designs</h4>
+
+    <div class="carousel">
+
+      <button class="carousel-btn left"
+        onclick="scrollCarousel('shirtTrack', -1)">
+        ‹
+      </button>
+
+      <div class="carousel-track" id="shirtTrack"></div>
+
+      <button class="carousel-btn right"
+        onclick="scrollCarousel('shirtTrack', 1)">
+        ›
+      </button>
+
+    </div>
+
+  </div>
+
+  <!-- LED -->
+  <div class="carousel-section led">
+
+    <h4>LED Background Designs</h4>
+
+    <div class="carousel">
+
+      <button class="carousel-btn left"
+        onclick="scrollCarousel('ledTrack', -1)">
+        ‹
+      </button>
+
+      <div class="carousel-track" id="ledTrack"></div>
+
+      <button class="carousel-btn right"
+        onclick="scrollCarousel('ledTrack', 1)">
+        ›
+      </button>
+
+    </div>
+
+  </div>
+
+  <!-- TARPAULIN -->
+  <div class="carousel-section tarp">
+
+    <h4>Tarpaulin & Print Designs</h4>
+
+    <div class="carousel">
+
+      <button class="carousel-btn left"
+        onclick="scrollCarousel('tarpTrack', -1)">
+        ‹
+      </button>
+
+      <div class="carousel-track" id="tarpTrack"></div>
+
+      <button class="carousel-btn right"
+        onclick="scrollCarousel('tarpTrack', 1)">
+        ›
+      </button>
+
+    </div>
+
+  </div>
+
+<!-- SOCIAL SPORTS -->
+<div class="carousel-section social sports">
+
+  <h4>Sports Designs</h4>
+
+  <div class="carousel">
+
+    <button class="carousel-btn left"
+      onclick="scrollCarousel('socialSportsTrack', -1)">
+      ‹
+    </button>
+
+    <div class="carousel-track" id="socialSportsTrack"></div>
+
+    <button class="carousel-btn right"
+      onclick="scrollCarousel('socialSportsTrack', 1)">
+      ›
+    </button>
+
+  </div>
+
+</div>
+
+<!-- SOCIAL SCHOOL -->
+<div class="carousel-section social school">
+
+  <h4>School Designs</h4>
+
+  <div class="carousel">
+
+    <button class="carousel-btn left"
+      onclick="scrollCarousel('socialSchoolTrack', -1)">‹</button>
+
+    <div class="carousel-track" id="socialSchoolTrack"></div>
+
+    <button class="carousel-btn right"
+      onclick="scrollCarousel('socialSchoolTrack', 1)">›</button>
+
+  </div>
+
+</div>
+
+<!-- SOCIAL HOLIDAYS -->
+<div class="carousel-section social holidays">
+
+  <h4>Holiday Designs</h4>
+
+  <div class="carousel">
+
+    <button class="carousel-btn left"
+      onclick="scrollCarousel('socialHolidaysTrack', -1)">‹</button>
+
+    <div class="carousel-track" id="socialHolidaysTrack"></div>
+
+    <button class="carousel-btn right"
+      onclick="scrollCarousel('socialHolidaysTrack', 1)">›</button>
+
+  </div>
+
+</div>
+<!-- SOCIAL ARTISTS -->
+<div class="carousel-section social artists">
+
+  <h4>Artist Designs</h4>
+
+  <div class="carousel">
+
+    <button class="carousel-btn left"
+      onclick="scrollCarousel('socialArtistsTrack', -1)">‹</button>
+
+    <div class="carousel-track" id="socialArtistsTrack"></div>
+
+    <button class="carousel-btn right"
+      onclick="scrollCarousel('socialArtistsTrack', 1)">›</button>
+
+  </div>
+
+</div>
+
+<!-- SOCIAL CONTEST -->
+<div class="carousel-section social contest">
+
+  <h4>Mr & Ms Designs</h4>
+
+  <div class="carousel">
+
+    <button class="carousel-btn left"
+      onclick="scrollCarousel('socialContestTrack', -1)">‹</button>
+
+    <div class="carousel-track" id="socialContestTrack"></div>
+
+    <button class="carousel-btn right"
+      onclick="scrollCarousel('socialContestTrack', 1)">›</button>
+
+  </div>
+
+</div>
+
+<!-- SOCIAL ELECTIONS -->
+<div class="carousel-section social elections">
+
+  <h4>Election Designs</h4>
+
+  <div class="carousel">
+
+    <button class="carousel-btn left"
+      onclick="scrollCarousel('socialElectionsTrack', -1)">‹</button>
+
+    <div class="carousel-track" id="socialElectionsTrack"></div>
+
+    <button class="carousel-btn right"
+      onclick="scrollCarousel('socialElectionsTrack', 1)">›</button>
+
+  </div>
+
+</div>
+
+<!-- SOCIAL OTHERS -->
+<div class="carousel-section social others">
+
+  <h4>Other Designs</h4>
+
+  <div class="carousel">
+
+    <button class="carousel-btn left"
+      onclick="scrollCarousel('socialOthersTrack', -1)">‹</button>
+
+    <div class="carousel-track" id="socialOthersTrack"></div>
+
+    <button class="carousel-btn right"
+      onclick="scrollCarousel('socialOthersTrack', 1)">›</button>
+
+  </div>
+
+</div>
+  <!-- CONTACT -->
+<section id="contact" class="contact reveal">
+
+  <h3>Let’s Work Together</h3>
+  <p class="contact-sub">Got a project in mind? Send me a message.</p>
+
+  <div class="contact-grid">
+
+<a class="contact-card" href="mailto:sarona.merlim.shs@gmail.com">
+  📧 Primary Email
+  <span>sarona.merlim.shs@gmail.com</span>
+</a>
+
+<a class="contact-card" href="mailto:milremsarona@icloud.com">
+  ✉️ Alternative Email
+  <span>milremsarona@icloud.com</span>
+</a>
+
+    <a class="contact-card" href="tel:09541560513">
+      📱 Call Me
+      <span>+63 954 156 0513</span>
+    </a>
+
+    <div class="contact-card">
+      📍 Location
+      <span>Cebu City, Philippines</span>
+    </div>
+
+  </div>
+
+</section>
+  <!-- SCRIPT -->
+  <script src="script.js"></script>
+
+</body>
+</html>
